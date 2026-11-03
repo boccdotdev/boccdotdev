@@ -77,7 +77,7 @@ const work = [
                 link: "https://mister.studio/",
             },
         ],
-        service: ["Migration", "Consultancy", "Development"],
+        service: ["Development", "Consultancy", "Migration"],
         link: {
             url: "https://handsomefrank.com/",
         },
