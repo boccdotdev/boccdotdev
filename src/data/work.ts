@@ -48,17 +48,6 @@ const work = [
 	// },
 	{
 		status: "WIP",
-        title: "Handsome Frank",
-        partners: [
-			{
-				name: "MISTER",
-				link: "https://mister.studio/",
-			},
-		],
-        service: ["Migration", "Consultancy", "Development"],
-    },
-	{
-		status: "WIP",
         title: "VASW v2",
         partners: [
 			{
@@ -78,6 +67,20 @@ const work = [
 			},
 		],
         service: ["Development"],
+    },
+   	{
+        year: 2026,
+        title: "Handsome Frank",
+        partners: [
+            {
+                name: "MISTER",
+                link: "https://mister.studio/",
+            },
+        ],
+        service: ["Migration", "Consultancy", "Development"],
+        link: {
+            url: "https://handsomefrank.com/",
+        },
     },
 	{
 		year: 2026,
