@@ -46,29 +46,26 @@ const work = [
 	// 	// 	url: "https://mister.studio/",
 	// 	// },
 	// },
-	{
-		status: "WIP",
-        title: "VASW v2",
-        partners: [
-			{
-				name: "Intercity",
-				link: "https://intercitystudio.com/",
-			},
-		],
-        service: ["Consultancy", "Development"],
-    },
-	{
-		status: "WIP",
-        title: "Hinterland",
-        partners: [
-			{
-				name: "Intercity",
-				link: "https://intercitystudio.com/",
-			},
-		],
+	// {
+	// 	status: "WIP",
+ //        title: "Hinterland",
+ //        partners: [
+	// 		{
+	// 			name: "Intercity",
+	// 			link: "https://intercitystudio.com/",
+	// 		},
+	// 	],
+ //        service: ["Development"],
+ //    },
+    {
+        year: 2026,
+        title: "Cravens",
         service: ["Development"],
+        link: {
+            url: "https://cravens.co.uk/",
+        },
     },
-   	{
+    {
         year: 2026,
         title: "Handsome Frank",
         partners: [
@@ -80,6 +77,20 @@ const work = [
         service: ["Development", "Consultancy", "Migration"],
         link: {
             url: "https://handsomefrank.com/",
+        },
+    },
+    {
+		year: 2026,
+        title: "VASW",
+        partners: [
+    		{
+    			name: "Intercity",
+    			link: "https://intercitystudio.com/",
+    		},
+		],
+        service: ["Development", "Consultancy"],
+        link: {
+            url: "https://vasw.org.uk/",
         },
     },
 	{
