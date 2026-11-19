@@ -126,7 +126,7 @@ const work = [
 	{
 		year: 2026,
 		title: "Cycle Citizens",
-		service: ["Development"],
+		service: ["Shopify Development"],
 		link: {
 			url: "https://cyclecitizens.cc/",
 		},
