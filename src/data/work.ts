@@ -252,24 +252,24 @@ const work = [
 			url: "https://thefounderoffice.com/",
 		},
 	},
-	{
-		year: 2025,
-		title: "Open Squash",
-		partners: [
-			{
-				name: "Soello",
-				link: "https://www.soello.com/",
-			},
-			{
-				name: "SB8",
-				link: "https://www.sb8.studio/",
-			},
-		],
-		service: ["Design", "Development"],
-		link: {
-			url: "https://opensquash.org/",
-		},
-	},
+	// {
+	// 	year: 2025,
+	// 	title: "Open Squash",
+	// 	partners: [
+	// 		{
+	// 			name: "Soello",
+	// 			link: "https://www.soello.com/",
+	// 		},
+	// 		{
+	// 			name: "SB8",
+	// 			link: "https://www.sb8.studio/",
+	// 		},
+	// 	],
+	// 	service: ["Design", "Development"],
+	// 	link: {
+	// 		url: "https://opensquash.org/",
+	// 	},
+	// },
 	{
 		year: 2025,
 		title: "POST",
