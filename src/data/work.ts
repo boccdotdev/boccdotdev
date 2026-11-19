@@ -59,6 +59,14 @@ const work = [
  //    },
     {
         year: 2026,
+        title: "Allday",
+        service: ["Shopify Development"],
+        link: {
+            url: "https://allday.com/",
+        },
+    },
+    {
+        year: 2026,
         title: "Cravens",
         service: ["Development"],
         link: {
