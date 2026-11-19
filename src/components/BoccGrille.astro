@@ -1,0 +1,31 @@
+---
+/**
+ * Animates the grille in <BoccAttribution />. Put it at the end of <body>.
+ *
+ * The loader is inlined (a few hundred bytes, no request). public/bocc-grille.js,
+ * about 1.3 KB gzipped, only loads when DevTools looks docked in the window.
+ * There's no API for "DevTools is open": a docked panel shrinks the page while
+ * the window stays the same size, and that gap is the signal. Touch devices,
+ * reduced motion and DevTools in its own window never load it.
+ *
+ * Bump `src`'s ?v= when bocc-grille.js changes.
+ */
+interface Props {
+	src?: string;
+}
+
+const { src = "/bocc-grille.js?v=1" } = Astro.props;
+---
+
+<script is:inline define:vars={{ src }}>
+	if (!matchMedia("(hover: none), (prefers-reduced-motion: reduce)").matches) {
+		const check = () => {
+			if (outerWidth - innerWidth > 160 || outerHeight - innerHeight > 200) {
+				removeEventListener("resize", check);
+				import(src);
+			}
+		};
+		addEventListener("resize", check, { passive: true });
+		check();
+	}
+</script>

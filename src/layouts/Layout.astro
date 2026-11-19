@@ -6,6 +6,8 @@ interface Props {
 }
 
 import "../styles/app.pcss";
+import BoccAttribution from "../components/BoccAttribution.astro";
+import BoccGrille from "../components/BoccGrille.astro";
 
 const {
 	title = "bocc(dot)dev",
@@ -16,6 +18,7 @@ const {
 
 <!doctype html>
 <html lang="en">
+	<BoccAttribution />
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={seoDescription} />
@@ -50,5 +53,6 @@ const {
 	<body class="w-full min-h-[100vh]">
 		<slot />
 		<script async defer src="https://cabin.bocc.dev/hello.js"></script>
+		<BoccGrille />
 	</body>
 </html>

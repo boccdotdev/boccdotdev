@@ -1,0 +1,47 @@
+---
+/**
+ * bocc(dot)dev source-code credit: an HTML comment with the speaker grille,
+ * for the browser's Elements panel. Put it first inside <html>, before <head>:
+ *
+ *   <!doctype html>
+ *   <html lang="en">
+ *     <BoccAttribution />
+ *     <head>
+ *
+ * The browser then makes it the first child of <html>, which DevTools shows
+ * expanded. (From Astro 5 it can sit between the doctype and <html>; Astro 3's
+ * compiler fails on a component there.)
+ *
+ * Add <BoccGrille /> at the end of <body> to animate it.
+ */
+interface Props {
+	/** "designed" (designed and built by) or "built" (built by) */
+	credit?: "designed" | "built";
+	/** Lines under the grille. Replaces the default three when set. */
+	lines?: string[];
+}
+
+// Frame 0 of grille.js. Change both together: the animation only takes over a grille it recognises.
+const GRILLE = [
+	"         o o * *",
+	"    o o o o o * * : .",
+	"   o o o o o o * * : .",
+	"  o o o o o o * * : : .",
+	" o o o o o o * * : : . .",
+	"* o o o o * * * : : . . .",
+	" * * * * * * * : : . . .",
+	"  * * * * : : : . . . .",
+	"   : : : : : . . . . .",
+	"    . . . . . . . . .",
+	"         . . . .",
+];
+
+const { credit = "designed", lines } = Astro.props;
+const text = lines ?? ["bocc(dot)dev", credit === "built" ? "built by" : "designed and built by", "https://bocc.dev"];
+
+// "--" can't appear inside a comment, so copy can't end it early.
+const body = [...GRILLE, "", ...text.map((line) => line.replace(/-{2,}/g, "-"))];
+const comment = `<!--\n\n${body.map((line) => `  ${line}`.trimEnd()).join("\n")}\n\n-->`;
+---
+
+<Fragment set:html={comment} />
