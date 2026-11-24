@@ -1,0 +1,78 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+// The privacy policy for the Allday Bundles Shopify app
+// (github.com/boccdotdev/allday-bundles-app). Its URL goes in the app's
+// App Store listing, so keep the path stable.
+const title = "Allday Bundles privacy policy · bocc(dot)dev";
+const seoTitle = "Allday Bundles privacy policy";
+const seoDescription =
+	"What the Allday Bundles Shopify app does with information when a store installs it.";
+const updated = "24 November 2026";
+---
+
+<Layout {title} {seoTitle} {seoDescription}>
+	<main class="w-full p-8">
+		<header
+			class="border-b dark:border-grey-dark border-grey-mid pb-12 space-y-8"
+		>
+			<a href="/" class="font-mono text-sm">bocc(dot)dev</a>
+			<h1 class="font-medium text-xl [text-wrap:balance]">
+				Allday Bundles privacy policy
+			</h1>
+		</header>
+		<article class="max-w-prose pt-12 pb-12 space-y-6 [text-wrap:pretty]">
+			<p class="font-mono text-sm">Last updated: {updated}</p>
+			<p>
+				Allday Bundles is a Shopify app made by bocc(dot)dev (William
+				Bocchinelli) for All Day. This policy explains what the app does
+				with information when a store installs it.
+			</p>
+
+			<h2 class="font-medium text-lg pt-4">What the app processes</h2>
+			<p>
+				The app works out bundle savings for a store's carts. To do that,
+				Shopify runs the app's discount function inside Shopify's own
+				systems, with the contents of the cart: the products, their
+				quantities and prices. That happens within Shopify. Cart contents
+				are never sent to us and we keep no copy of them.
+			</p>
+			<p>
+				The app's Admin page reads the store's bundle discount and the names
+				of the products in it, and shows them to the staff member who opened
+				it. Nothing it reads is stored.
+			</p>
+
+			<h2 class="font-medium text-lg pt-4">What the app stores</h2>
+			<p>
+				Nothing about customers. The only thing the app keeps is its bundle
+				configuration, which is stored by Shopify in the store's own discount
+				settings and contains products and savings, not people.
+			</p>
+
+			<h2 class="font-medium text-lg pt-4">Hosting</h2>
+			<p>
+				The app's Admin page and its Shopify webhooks are served by
+				Cloudflare. Cloudflare may log technical details of each request
+				(such as IP address and time) for security and reliability, under
+				<a class="underline" href="https://www.cloudflare.com/privacypolicy/"
+					>Cloudflare's own privacy policy</a
+				>. Our logs record the type of request only, never its contents.
+			</p>
+
+			<h2 class="font-medium text-lg pt-4">Data requests</h2>
+			<p>
+				Shopify sends every app a notice when a customer asks to see or
+				delete their data, or when a store uninstalls. Because the app holds
+				no customer or shop data, there is nothing to send or delete, and we
+				confirm that to Shopify.
+			</p>
+
+			<h2 class="font-medium text-lg pt-4">Contact</h2>
+			<p>
+				Questions about this policy:
+				<a class="underline" href="mailto:contact@bocc.dev">contact@bocc.dev</a>.
+			</p>
+		</article>
+	</main>
+</Layout>
