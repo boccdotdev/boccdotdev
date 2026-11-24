@@ -62,7 +62,7 @@ const work = [
         title: "Allday",
         service: ["Shopify Development"],
         link: {
-            url: "https://allday.com/",
+            url: "https://allday.co.uk/",
         },
     },
     {
